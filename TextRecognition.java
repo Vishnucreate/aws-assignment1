@@ -2,7 +2,8 @@ import software.amazon.awssdk.auth.credentials.ProfileCredentialsProvider;
 import software.amazon.awssdk.services.rekognition.RekognitionClient;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import software.amazon.awssdk.services.rekognition.model.*;
 import software.amazon.awssdk.services.sqs.SqsClient;
 import software.amazon.awssdk.services.sqs.model.ReceiveMessageRequest;
