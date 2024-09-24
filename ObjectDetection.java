@@ -13,7 +13,7 @@ import software.amazon.awssdk.services.s3.model.ListObjectsV2Response;
 import java.io.InputStream;
 import java.util.List;
 
-public class CarDetection {
+public class ObjectDetection {
 
     private static final String BUCKET_NAME = "carimagestorage";
     private static final String QUEUE_URL = "https://sqs.us-east-1.amazonaws.com/323052225972/sqsforcarimage";
