@@ -1,3 +1,7 @@
+package com.aws.InstanceB;
+
+
+
 import software.amazon.awssdk.auth.credentials.ProfileCredentialsProvider;
 import software.amazon.awssdk.services.rekognition.RekognitionClient;
 import java.nio.file.Files;
