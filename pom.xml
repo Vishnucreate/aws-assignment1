@@ -37,9 +37,6 @@
     </dependencies>
 
     <build>
-        <!-- Specify the non-standard source directory -->
-        <sourceDirectory>.</sourceDirectory> <!-- Points to the root directory -->
-        
         <plugins>
             <!-- Compiler Plugin -->
             <plugin>
@@ -61,7 +58,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>com.example.ObjectDetection</mainClass> <!-- Replace with your main class -->
+                            <mainClass>com.aws.ObjectDetection</mainClass> <!-- Replace with your actual main class -->
                         </manifest>
                     </archive>
                 </configuration>
