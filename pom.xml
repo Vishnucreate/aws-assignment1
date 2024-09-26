@@ -49,22 +49,38 @@
                 </configuration>
             </plugin>
 
-            <!-- Maven Shade Plugin to build a fat JAR -->
+            <!-- Shade Plugin to create a shaded JAR -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
-                <version>3.2.4</version>
+                <version>3.4.1</version> <!-- Updated version -->
                 <executions>
                     <execution>
                         <phase>package</phase>
                         <goals>
                             <goal>shade</goal>
                         </goals>
-                        <configuration>
-                            <minimizeJar>true</minimizeJar> <!-- Optional: Minimizes the JAR size by removing unused dependencies -->
-                        </configuration>
                     </execution>
                 </executions>
+                <configuration>
+                    <createDependencyReducedPom>false</createDependencyReducedPom>
+                    <minimizeJar>true</minimizeJar>
+                </configuration>
+            </plugin>
+
+            <!-- JAR Plugin to package the code into a JAR file -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.1.0</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <mainClass>com.aws.InstanceA.ObjectDetection</mainClass> <!-- Replace with your actual main class -->
+                        </manifest>
+                    </archive>
+                </configuration>
             </plugin>
         </plugins>
     </build>
