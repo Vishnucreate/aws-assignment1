@@ -18,21 +18,21 @@
         <dependency>
             <groupId>software.amazon.awssdk</groupId>
             <artifactId>s3</artifactId>
-            <version>2.20.1</version> <!-- AWS SDK version -->
+            <version>2.20.1</version>
         </dependency>
 
         <!-- AWS SDK for SQS -->
         <dependency>
             <groupId>software.amazon.awssdk</groupId>
             <artifactId>sqs</artifactId>
-            <version>2.20.1</version> <!-- AWS SDK version -->
+            <version>2.20.1</version>
         </dependency>
 
         <!-- AWS SDK for Rekognition -->
         <dependency>
             <groupId>software.amazon.awssdk</groupId>
             <artifactId>rekognition</artifactId>
-            <version>2.20.1</version> <!-- AWS SDK version -->
+            <version>2.20.1</version>
         </dependency>
 
         <!-- Apache Commons Logging -->
@@ -42,7 +42,7 @@
             <version>1.2</version>
         </dependency>
 
-        <!-- SLF4J for Logging (No Operation) -->
+        <!-- SLF4J for Logging -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
@@ -52,6 +52,13 @@
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-nop</artifactId>
             <version>1.7.30</version>
+        </dependency>
+
+        <!-- Apache HTTP Client (used by AWS SDK) -->
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.13</version>
         </dependency>
     </dependencies>
 
@@ -77,7 +84,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>com.aws.InstanceA.ObjectDetection</mainClass> <!-- Your main class -->
+                            <mainClass>com.aws.InstanceA.ObjectDetection</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -87,7 +94,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
-                <version>3.3.0</version>
+                <version>3.2.4</version>
                 <executions>
                     <execution>
                         <phase>package</phase>
